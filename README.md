@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fire Kangaroo Chat App
+
+Welcome to the Fire Kangaroo Chat App! This is a chat application that allows users to communicate with each other in real-time.
+
+This is team `Fire Kangaroo`'s repository for the Project 1: Real Time Chat App 💎 of Hack Weekly.
+
+> This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Contributing
+
+1. Clone the repository.
+2. Create a new branch for your contribution. You can name the branch whatever you like.
+3. Make your changes in the new branch.
+4. Submit a pull request to the repository.
+
+> README.md edits are negligble and you can merge anytime to `master`.
+
+Don't forget to add the PR on our [Project Board](https://github.com/orgs/Hack-Weekly/projects/24).
 
 ## Getting Started
 
