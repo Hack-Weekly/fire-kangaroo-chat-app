@@ -17,3 +17,10 @@ fire-kangaroo-chat-app/
 └── server/
     └── ...
 ```
+
+## Contributing
+
+1. Clone the repository.
+2. Create a new branch for your contribution. You can name the branch whatever you like.
+3. Make your changes in the new branch.
+4. Submit a pull request to the repository.
