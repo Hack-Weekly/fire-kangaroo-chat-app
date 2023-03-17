@@ -24,3 +24,7 @@ fire-kangaroo-chat-app/
 2. Create a new branch for your contribution. You can name the branch whatever you like.
 3. Make your changes in the new branch.
 4. Submit a pull request to the repository.
+
+> README.md edits are negligble and you can merge anytime to `master`.
+
+Don't forget to add the PR on our [Project Board](https://github.com/orgs/Hack-Weekly/projects/24).
