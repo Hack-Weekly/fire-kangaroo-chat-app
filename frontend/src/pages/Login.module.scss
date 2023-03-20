@@ -1,0 +1,62 @@
+@use "../mixin.scss" as mixin;
+
+.outer {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #f5fffd 0%, #c8f0e8 100%);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_container {
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: 80%;
+
+  background: rgba(245, 255, 253, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  @include mixin.mobile2 {
+    flex-wrap: wrap;
+  }
+}
+
+.login_left {
+  //background-color: lavender;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    text-align: center;
+    //background-color: lavender;
+    width: 90%;
+    margin: auto;
+  }
+  .p1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+  .converso_icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h2 {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.login_right {
+  background-color: pink;
+  flex-basis: 100%;
+}

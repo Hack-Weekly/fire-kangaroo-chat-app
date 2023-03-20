@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Routes />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -1,0 +1,799 @@
+@use "./mixin.scss" as mixin;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+*,
+*:before,
+*:after,
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.bold-36 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.44;
+  letter-spacing: -1px;
+}
+
+.bold-32 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.75px;
+}
+
+.bold-28 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.42;
+  letter-spacing: -0.75px;
+}
+
+.bold-24 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.66;
+  letter-spacing: -0.5px;
+}
+.bold-24-res {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.75px;
+  @include mixin.mobile2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.mobile {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.tablet {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+  }
+}
+
+.bold-20 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.75px;
+}
+
+.bold-16-res {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.75px;
+  @include mixin.tablet {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+  }
+}
+.bold-16-20-28 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.75px;
+  @include mixin.tablet {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.desktop {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.42;
+    letter-spacing: -0.75px;
+  }
+}
+.bold-14 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.42;
+  letter-spacing: -0.25px;
+}
+
+.bold-12-res {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.42;
+  letter-spacing: -0.25px;
+  @include mixin.tablet {
+    font-size: 14px;
+  }
+  @include mixin.tablet {
+    font-size: 16px;
+  }
+}
+.semibold-25 {
+  font-size: 25px;
+}
+
+.bold-14-res {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: -0.25px;
+  @include mixin.tablet {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.desktop {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.42;
+    letter-spacing: -0.75px;
+  }
+}
+
+.bold-14-res-disc {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: -0.25px;
+  @include mixin.tablet {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.desktop {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.66;
+    letter-spacing: -0.5px;
+  }
+}
+.semibold-24 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.75px;
+}
+.semibold-20 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.75px;
+}
+.semibold-20-res {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.75px;
+  word-wrap: break-word;
+  @include mixin.tablet2 {
+    font-size: 145%;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    word-wrap: break-word;
+  }
+  @include mixin.mobile2 {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    word-wrap: break-word;
+  }
+}
+
+.bold-20-res {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.75px;
+  word-wrap: break-word;
+  @include mixin.tablet2 {
+    font-size: 115%;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    word-wrap: break-word;
+  }
+  @include mixin.mobile2 {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    word-wrap: break-word;
+  }
+}
+.semibold-18-res {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  @include mixin.tablet {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+}
+.semibold-16 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+}
+.semibold-16-res {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  @include mixin.mobile2 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.mobile {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.tablet {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+}
+.semibold-14 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+}
+.semibold-14-res {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  @include mixin.mobile2 {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.mobile {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+}
+
+.semibold-12 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.83;
+  letter-spacing: -0.15px;
+}
+.semibold-12-14 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.83;
+  letter-spacing: -0.15px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.83;
+    letter-spacing: -0.15px;
+  }
+}
+.semibold-12-res {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.83;
+  letter-spacing: -0.15px;
+  @include mixin.tablet {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+  }
+  @include mixin.desktop {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+}
+
+.semibold-10 {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: 0px;
+}
+.semibold-8 {
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 2;
+  letter-spacing: +0.15px;
+}
+
+.regular-24 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.5px;
+}
+
+.regular-16 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+.regular-16-res {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  @include mixin.tablet2 {
+    font-size: 110%;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.mobile2 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+}
+
+.regular-14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: 0.15px;
+}
+
+.regular-14-res {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: 0.15px;
+
+  @include mixin.mobile2 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.mobile {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+}
+
+.regular-12 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0px;
+}
+.regular-10 {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0px;
+}
+
+.regular-12-res {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.desktop {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+}
+.regular-10-res {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0px;
+  }
+  @include mixin.desktop {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    letter-spacing: 0.15px;
+  }
+}
+
+.regular-12-res {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    letter-spacing: 0.15px;
+  }
+}
+
+.regular-12-14-16 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.desktop {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.42;
+    letter-spacing: 0.15px;
+  }
+}
+
+.medium-22 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.27;
+  letter-spacing: 0px;
+}
+.medium-18 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.44;
+  letter-spacing: -0.15px;
+}
+
+.medium-16 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+
+.medium-16-res {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  @include mixin.mobile2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.mobile {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.tablet {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+}
+
+.medium-14 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.1px;
+}
+.medium-14-res {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 0.15px;
+
+  @include mixin.mobile2 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.mobile {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+  }
+}
+
+.medium-12 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0px;
+}
+.medium-12-res {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    letter-spacing: 0.1px;
+  }
+  @include mixin.desktop {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.44;
+    letter-spacing: -0.15px;
+  }
+}
+.medium-12-14-16 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    letter-spacing: 0.1px;
+  }
+  @include mixin.desktop {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.44;
+    letter-spacing: -0.15px;
+  }
+}
+.medium-12-14 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    letter-spacing: 0.1px;
+  }
+}
+.medium-12-res-2 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    letter-spacing: 0.1px;
+  }
+  @include mixin.desktop {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.44;
+    letter-spacing: -0.15px;
+  }
+}
+.medium-10 {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: +0.15px;
+}
+.medium-10-res {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: +0.15px;
+  @include mixin.desktop {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: 0px;
+  }
+}
+
+.light-14 {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.64;
+  letter-spacing: 0px;
+}
+.light-10-res {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1.64;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 12px;
+  }
+  @include mixin.tablet {
+    font-size: 14px;
+  }
+}
+.font-detail {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: 0.1px;
+  @include mixin.tablet {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+  }
+  @include mixin.desktop {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.66;
+    letter-spacing: -0.5px;
+  }
+}
+.font-detail-price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.75px;
+  @include mixin.tablet {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.75px;
+  }
+}
+.font-detail-chip {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.83;
+  letter-spacing: -0.15px;
+  @include mixin.tablet {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+  }
+}
+
+.font-original {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: 0px;
+  @include mixin.tablet {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 786px;
+  padding-inline: 16px;
+  margin-inline: auto;
+  @include mixin.tablet {
+    max-width: 1440px;
+    padding-inline: 50px;
+  }
+  @include mixin.desktop {
+    max-width: 1440px;
+    padding-inline: 40px;
+  }
+  @include mixin.desktop2 {
+    max-width: 1440px;
+    padding-inline: 50px;
+  }
+}
+.star {
+  display: none;
+  @include mixin.tablet {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+
+.breadmargin {
+  border-bottom: 1px solid mixin.$neutral-400;
+  text-transform: capitalize;
+}
+.bread {
+  padding-block: 0.8rem;
+}
+.breadcrumb {
+  cursor: pointer;
+  &:hover {
+    color: mixin.$primary-button;
+  }
+}
+
+.ratingku {
+  display: flex;
+  font-size: 20px !important;
+  @include mixin.tablet {
+    font-size: 32px !important;
+  }
+  @include mixin.tablet {
+    font-size: 38px !important;
+  }
+  &__star {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
