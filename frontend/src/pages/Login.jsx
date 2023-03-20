@@ -5,7 +5,7 @@ const Login = () => {
     return(
         <>
             <div className={styles.outer}>
-                <div className={`${styles.login_container} container`}>
+                <div className={`${styles.login_container}`}>
                     {/* <p className={`${styles.login} regular-16-res`}>ini login</p> */}
                     <div className={styles.login_left}>
                         <div className={styles.converso_icon}>
@@ -16,7 +16,26 @@ const Login = () => {
                         <p className={`${styles} regular-10-res`}> With its intuitive design and convenient features, staying in touch has <b>never been easier</b>.</p>
                     </div>
                     <div className={styles.login_right}>
-                        <p>Login</p>
+                        <h2 className={`${styles} bold-24-res`}>Login</h2>
+                        <div className={styles.form}>
+                            <form>
+                            <div className={styles.input_container}>
+                                <input type="text" name="uname" required placeholder='Username / Email'/>
+                                {/* {renderErrorMessage("uname")} */}
+                            </div>
+                            <div className={styles.input_container}>
+                                <input className={`${styles} regular 18-res`} type="password" name="pass" required placeholder='Password'/>
+                                {/* {renderErrorMessage("pass")} */}
+                            </div>
+                            <div className={styles.remember_me_forgot_pass}>
+                                <div className={styles.remember_me}>
+                                     <input type="checkbox" value="lsRememberMe" id="rememberMe"/> 
+                                     <label for="rememberMe">Remember me</label> 
+                                </div>
+                                <p>Forgot Password</p>
+                            </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -57,6 +57,59 @@
 }
 
 .login_right {
-  background-color: pink;
+  background-color: mixin.$theme-98;
   flex-basis: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    //background-color: lavender;
+  }
+
+  .input_container {
+    width: 85%;
+    margin: auto;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    border: 1px solid #e0e0e0;
+    color: mixin.$neutral-600;
+    margin: 0.8rem 0rem;
+    border-radius: 6px;
+
+    background-color: #ebf7f5;
+    /* theme-30 */
+    border-radius: 5px;
+    color: mixin.$theme-30;
+    border: 1.3px solid mixin.$theme-30;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .remember_me_forgot_pass {
+    //background-color: lightblue;
+    width: 85%;
+    margin: 1rem auto 2rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .remember_me {
+    display: flex;
+    align-items: center;
+    input {
+      margin-right: 0.5rem;
+    }
+  }
 }
