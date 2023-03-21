@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@layer base {
+  .min-h-dscreen {
+    min-height: 100vh; /* Fallback for very old browsers */
+    min-height: 100dvh;
+  }
+  .max-h-dscreen {
+    max-height: 100vh; /* Fallback for very old browsers */
+    max-height: 100dvh;
+  }
+  .h-dscreen {
+    height: 100vh; /* Fallback for very old browsers */
+    height: 100dvh;
+  }
+
+  /* Magic number but it works */
+  .h-room {
+    height: calc(100vh - 7.4rem); /* Fallback for very old browsers */
+    height: calc(100dvh - 7.4rem);
+  }
+}
