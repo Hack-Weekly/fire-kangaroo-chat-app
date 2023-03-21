@@ -1,7 +1,14 @@
 import styles from './Login.module.scss'
-import { ReactComponent as MySvg } from '../images/icons/converso.svg';
+import { ReactComponent as googleSvg } from '../images/icons/google.svg';
+import { ReactComponent as MySvg } from '../images/icons/google.svg';
+import { ReactComponent as emailSvg } from '../images/icons/email.svg';
+import { useState } from 'react';
 
-const Login = () => {
+const LoginEmail = () => {
+    const [uname, setUname] = useState("")
+    const [password, setPassword] = useState("")
+
+    console.log("uname", uname)
     return(
         <>
             <div className={styles.outer}>
@@ -12,29 +19,17 @@ const Login = () => {
                             <MySvg/>
                             <h2 className={`${styles} bold-24-res`}>Converso.</h2>
                         </div>
-                        <p className={`${styles.p1} regular-10-res`}>Converso is a user-friendly chat application that allows you to <b>connect</b> with friends and family <i>effortlessly</i>. </p>
+                       <div>
+                         <p className={`${styles.p1} regular-10-res`}>Converso is a user-friendly chat application that allows you to <b>connect</b> with friends and family <i>effortlessly</i>. </p>
                         <p className={`${styles} regular-10-res`}> With its intuitive design and convenient features, staying in touch has <b>never been easier</b>.</p>
+                       </div>
                     </div>
                     <div className={styles.login_right}>
                         <h2 className={`${styles} bold-24-res`}>Login</h2>
-                        <div className={styles.form}>
-                            <form>
-                            <div className={styles.input_container}>
-                                <input type="text" name="uname" required placeholder='Username / Email'/>
-                                {/* {renderErrorMessage("uname")} */}
-                            </div>
-                            <div className={styles.input_container}>
-                                <input className={`${styles} regular 18-res`} type="password" name="pass" required placeholder='Password'/>
-                                {/* {renderErrorMessage("pass")} */}
-                            </div>
-                            <div className={styles.remember_me_forgot_pass}>
-                                <div className={styles.remember_me}>
-                                     <input type="checkbox" value="lsRememberMe" id="rememberMe"/> 
-                                     <label for="rememberMe">Remember me</label> 
-                                </div>
-                                <p>Forgot Password</p>
-                            </div>
-                            </form>
+                        <div className={styles.buttons_signin}>
+                            <button><googleSvg/> <p>Continue with Google</p> </button>
+                             <button><emailSvg/> Continue with Google </button>
+                            <p className={`${styles.sign_up}`}>Dont have an account? <a href="#" className={styles.link}> Sign Up</a></p>
                         </div>
                     </div>
                 </div>
@@ -43,4 +38,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default LoginEmail

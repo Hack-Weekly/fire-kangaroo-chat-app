@@ -761,33 +761,3 @@ ul {
     padding-inline: 50px;
   }
 }
-.star {
-  display: none;
-  @include mixin.tablet {
-    display: inline-block;
-    vertical-align: bottom;
-  }
-}
-
-.breadmargin {
-  border-bottom: 1px solid mixin.$neutral-400;
-  text-transform: capitalize;
-}
-.bread {
-  padding-block: 0.8rem;
-}
-
-.ratingku {
-  display: flex;
-  font-size: 20px !important;
-  @include mixin.tablet {
-    font-size: 32px !important;
-  }
-  @include mixin.tablet {
-    font-size: 38px !important;
-  }
-  &__star {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-}
