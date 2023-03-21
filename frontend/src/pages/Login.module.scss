@@ -197,6 +197,17 @@
       margin-left: 1rem;
       color: mixin.$theme-54;
     }
+    @include mixin.tablet2 {
+      // flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      text-transform: none;
+      font-weight: 500;
+      padding: 1rem;
+      border-radius: 5px;
+    }
   }
 
   .sign_up {
