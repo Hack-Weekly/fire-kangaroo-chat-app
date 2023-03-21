@@ -3,6 +3,7 @@ import { ReactComponent as MySvg } from '../images/icons/converso.svg';
 import { ReactComponent as GoogleSvg } from '../images/icons/google.svg';
 import { ReactComponent as EmailSvg } from '../images/icons/email.svg';
 //import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginEmail = () => {
 
@@ -26,7 +27,9 @@ const LoginEmail = () => {
                         <h2 className={`${styles} bold-24-res`}>Login</h2>
                         <div className={styles.buttons_signin}>
                             <button><GoogleSvg/> <p>Continue with Google</p> </button>
-                            <button><EmailSvg/> <p>Continue with Email</p> </button>
+                           <Link to={`/login_email`}>
+                             <button><EmailSvg/> <p>Continue with Email</p> </button>
+                           </Link>
                             <p className={`${styles.sign_up}`}>Dont have an account? <a href="#" className={styles.link}> Sign Up</a></p>
                         </div>
                     </div>
