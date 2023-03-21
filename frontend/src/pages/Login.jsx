@@ -1,6 +1,6 @@
 import styles from './Login.module.scss'
-import { ReactComponent as googleSvg } from '../images/icons/google.svg';
 import { ReactComponent as MySvg } from '../images/icons/google.svg';
+import { ReactComponent as MySvg2 } from '../images/icons/email.svg';
 import { ReactComponent as emailSvg } from '../images/icons/email.svg';
 import { useState } from 'react';
 
@@ -27,8 +27,8 @@ const LoginEmail = () => {
                     <div className={styles.login_right}>
                         <h2 className={`${styles} bold-24-res`}>Login</h2>
                         <div className={styles.buttons_signin}>
-                            <button><googleSvg/> <p>Continue with Google</p> </button>
-                             <button><emailSvg/> Continue with Google </button>
+                            <button><MySvg/> <p>Continue with Google</p> </button>
+                            <button><MySvg2/> <p>Continue with Email</p> </button>
                             <p className={`${styles.sign_up}`}>Dont have an account? <a href="#" className={styles.link}> Sign Up</a></p>
                         </div>
                     </div>
