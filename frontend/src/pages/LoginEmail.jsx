@@ -6,7 +6,7 @@ const Login = () => {
     const [uname, setUname] = useState("")
     const [password, setPassword] = useState("")
 
-    console.log("uname", uname)
+    //console.log("uname", uname)
     return(
         <>
             <div className={styles.outer}>
