@@ -1,0 +1,55 @@
+$theme-10: #0f2224;
+$theme-19: #1d4044;
+$theme-30: #2d666c;
+$theme-57: #60c4be;
+$theme-98: #f5fffd;
+
+$shadow-elevation-1: 0px 0px 1px rgba(40, 41, 61, 0.08),
+  0px 0.5px 2px rgba(96, 97, 112, 0.16);
+$shadow-elevation-2: 0px 0px 1px rgba(40, 41, 61, 0.04),
+  0px 2px 4px rgba(96, 97, 112, 0.16);
+$shadow-elevation-3: 0px 0px 2px rgba(40, 41, 61, 0.04),
+  0px 4px 8px rgba(96, 97, 112, 0.16);
+$shadow-elevation-4: 0px 2px 4px rgba(40, 41, 61, 0.04),
+  0px 8px 16px rgba(96, 97, 112, 0.16);
+$shadow-elevation-5: 0px 2px 8px rgba(40, 41, 61, 0.04),
+  0px 16px 24px rgba(96, 97, 112, 0.16);
+$shadow-elevation-6: 0px 2px 8px rgba(40, 41, 61, 0.08),
+  0px 20px 32px rgba(96, 97, 112, 0.24);
+$shadow-inset-3: inset 1px 2px 2px rgba(0, 0, 0, 0.08);
+
+@mixin mobile {
+  @media only screen and (min-width: 360px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (min-width: 1000px) {
+    @content;
+  }
+}
+@mixin mobile2 {
+  @media only screen and (max-width: 360px) {
+    @content;
+  }
+}
+@mixin tablet2 {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop2 {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin mobile3 {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}

@@ -8,9 +8,12 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
+import { Footer } from '../components/Footer';
 
 const Home = () => {
   return (
+    <>
+    
     <Box maxW="100vw" minH="90vh">
       <Center minH="90vh">
         <Flex>
@@ -45,6 +48,8 @@ const Home = () => {
         </Flex>
       </Center>
     </Box>
+    <Footer />
+    </>
   );
 };
 

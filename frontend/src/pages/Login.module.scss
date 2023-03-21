@@ -1,0 +1,193 @@
+@use "../mixin.scss" as mixin;
+
+.outer {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #f5fffd 0%, #c8f0e8 100%);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_container {
+  //background-color: pink;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: 80%;
+
+  background: rgba(245, 255, 253, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  // @include mixin.tablet2 {
+  //   // flex-wrap: wrap;
+  //   // width: 90%;
+  //   display: none;
+  // }
+}
+
+.login_left {
+  flex-basis: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //padding-top: 8rem;
+  p {
+    text-align: center;
+    //background-color: lavender;
+    width: 80%;
+    margin: auto;
+  }
+  .p1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+  .converso_icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h2 {
+      margin-left: 1rem;
+    }
+  }
+  @include mixin.tablet2 {
+    // flex-wrap: wrap;
+    // width: 90%;
+    display: none;
+  }
+}
+
+///////////////////////////////////////////////// LOGIN EMAIL SCSS /////////////////////////////////////////////////
+.login_right {
+  background: mixin.$theme-98;
+  flex-basis: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //padding-top: 8rem;
+
+  h2 {
+    position: relative;
+    top: -7rem;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    //margin-top: 5rem;
+    //background-color: lavender;
+  }
+
+  .input_container {
+    width: 85%;
+    margin: auto;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    border: 1px solid #e0e0e0;
+    margin: 0.8rem 0rem;
+    border-radius: 6px;
+
+    background-color: #ebf7f5;
+    /* theme-30 */
+    border-radius: 5px;
+    color: mixin.$theme-30;
+    border: 1.3px solid mixin.$theme-30;
+    //font-size: 1.2rem;
+    font-weight: 500;
+    @include mixin.tablet2 {
+      padding: 1rem 3rem;
+    }
+  }
+
+  .remember_me_forgot_pass {
+    width: 85%;
+    margin: 1rem auto 2rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      color: mixin.$theme-57;
+      font-weight: 700;
+      line-height: 17px;
+    }
+    @include mixin.tablet2 {
+      // flex-wrap: wrap;
+      // width: 90%;
+      display: none;
+    }
+  }
+
+  .remember_me {
+    display: flex;
+    align-items: center;
+    input {
+      margin-right: 0.5rem;
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: mixin.$theme-30;
+    width: 85%;
+    padding: 1.5rem;
+    margin: 3rem auto;
+    border-radius: 6px;
+    color: white;
+    font-weight: 700;
+    @include mixin.tablet2 {
+      // flex-wrap: wrap;
+      width: 40%;
+      background-color: mixin.$theme-19;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  }
+
+  .sign_up {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3rem;
+    text-align: center;
+    margin: auto;
+
+    .link {
+      font-weight: 700;
+      margin-left: 0.5rem;
+      text-decoration: underline;
+      color: mixin.$theme-57;
+    }
+  }
+}
+
+///////////////////////////////////////////////// LOGIN GOOGLE/EMAIL SCSS /////////////////////////////////////////////////
+.buttons_signin {
+  button {
+    background: lavender;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    p {
+      margin-left: 1rem;
+    }
+  }
+}
