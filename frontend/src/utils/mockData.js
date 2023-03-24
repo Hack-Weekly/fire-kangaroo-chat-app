@@ -1,3 +1,5 @@
+// MOCK DATA. PLEASE DELETE ONCE FRONTEND IS CONNECTED TO BACKEND PROPERLY :)
+
 /**
  * Mock Data for the User Profile so that backend can easily define their API endpoint. :)
  *
