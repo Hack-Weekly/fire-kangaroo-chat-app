@@ -1,5 +1,5 @@
 import {
-  Tabs, TabList, TabPanels, Tab, TabPanel, Flex, Avatar, AvatarBadge, Icon, Text, Button, Link
+  Tabs, TabList, TabPanels, Tab, TabPanel, Flex, Avatar, AvatarBadge, Icon, Text, Button, Link, Input
 } from '@chakra-ui/react'
 import { ReactComponent as ChatIcon } from '../images/icons/chat.svg'
 import { ReactComponent as PersonIcon } from '../images/icons/person.svg'
@@ -7,59 +7,7 @@ import { ReactComponent as ConversoIcon } from '../images/icons/converso-white.s
 import { ReactComponent as CameraIcon } from '../images/icons/camera.svg'
 import { ReactComponent as EllipsisIcon } from '../images/icons/ellipsis.svg'
 import timeAgo from '../utils/timeAgo'
-
-/**
- * Mock Data for the User Profile so that backend can easily define their API endpoint. :)
- * 
- */
-const mockProfileData = {
-  avatar: 'https://picsum.photos/200', // Avatar image url
-  username: 'SuperKebbit',
-  bio: 'My biography huh? Well I don’t know what to type so this is this. Another extra sentence for those with a lot to say.',
-}
-
-/**
- * Mock Data for the Chat Room so that backend can easily define their API endpoint. :)
- */
-const mockChatData = [
-  {
-    name: 'Steven',
-    avatar: '../images/icons/person.svg',
-    presence: {
-      active: false,
-      lastActive: 1679476080, // Time in UNIX Format. This data may or may not exist depending on active status.
-    },
-    messageHistory: [
-      {
-        sender: 'Steven',
-        message: 'I am test data',
-        timestamp: 1679415060 // Time in UNIX Format
-      }, {
-        sender: 'SuperKebbit',
-        message: 'I am test data 2',
-        timestamp: 1679415660 // Time in UNIX Format
-      }
-    ]
-  },
-  {
-    name: 'Alicia',
-    avatar: '../images/icons/person.svg',
-    presence: {
-      active: true,
-    },
-    messageHistory: [
-      {
-        sender: 'Alicia',
-        message: 'Hi',
-        timestamp: 1679440080 // Time in UNIX Format
-      }, {
-        sender: 'SuperKebbit',
-        message: 'Hello',
-        timestamp: 1679440140 // Time in UNIX Format
-      }
-    ]
-  },
-]
+import { mockChatData, mockProfileData } from '../utils/mockData'
 
 const Profile = ({ profile }) => {
   return (
@@ -84,7 +32,7 @@ const Profile = ({ profile }) => {
   )
 }
 
-const Chat = ({ chats }) => {
+const Chat = ({ chats, profile }) => {
   return (
     <Tabs isManual variant='unstyled' orientation='vertical' w='100%' h='100%'>
       <TabList w='md' bg='#F7F7F7'>
@@ -92,52 +40,72 @@ const Chat = ({ chats }) => {
           <Text fontSize='1.5em' fontWeight='700'>Chats ({chats.length})</Text>
           <Icon as={EllipsisIcon} size='1.75em' />
         </Flex>
-        {chats.map((chat, index) => {
-          return <Tab key={index} h='5.25em' display='flex' justifyContent='flex-start' px='2em' gap='1.5em' margin='1px' _selected={{ bg: '#C7C7C7', borderRadius: '0.625em' }}>
-            {chat.presence.active ? (<Avatar src={chat.avatar}>
-              <AvatarBadge boxSize='1rem' bg='#3CD65E' border='1px solid #FAFAFA' />
-            </Avatar>) : (<Avatar src={chat.avatar} />)}
-            <Flex direction='column' alignItems='flex-start' w='100%'>
-              <Flex justifyContent='space-between' alignItems='center' w='100%'>
-                <Text fontWeight='600' fontSize='lg'>{chat.name}</Text>
-                <Text fontSize='sm' color='#545454'>{new Date(chat.messageHistory[0].timestamp * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Text>
-              </Flex>
-              <Text>{chat.messageHistory[0].message}</Text>
-            </Flex>
-          </Tab>
-        })}
-      </TabList>
-      <TabPanels w='100%'>
-        {chats.map((chat, index) => {
-          return <TabPanel key={index} p='0'>
-            <Flex px='2em' alignItems='center' gap='1.5em' h='5.25em' bg='#F7F7F7' borderLeft='1px solid #E8E8E8'>
+        <Flex h='calc(100vh - 5.25rem)' direction='column' overflow='auto'>
+          {chats.map((chat, index) => {
+            return (<Tab key={index} h='5.25em' display='flex' justifyContent='flex-start' px='2em' gap='1.5em' margin='1px' _selected={{ bg: '#C7C7C7', borderRadius: '0.625em' }}>
               {chat.presence.active ? (<Avatar src={chat.avatar}>
                 <AvatarBadge boxSize='1rem' bg='#3CD65E' border='1px solid #FAFAFA' />
               </Avatar>) : (<Avatar src={chat.avatar} />)}
+              <Flex direction='column' alignItems='flex-start' w='100%'>
+                <Flex justifyContent='space-between' alignItems='center' w='100%'>
+                  <Text fontWeight='600' fontSize='lg'>{chat.username}</Text>
+                  <Text fontSize='sm' color='#545454'>{chat.messageHistory?.length ? new Date(chat.messageHistory[0].timestamp * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''}</Text>
+                </Flex>
+                <Text textAlign='left' noOfLines={1}>{chat.messageHistory?.length ? chat.messageHistory[chat.messageHistory.length - 1].content : '—'}</Text>
+              </Flex>
+            </Tab>)
+          })}
+        </Flex>
+      </TabList>
+      <TabPanels w='100%'>
+        {chats.map((chat, index) => {
+          return (<TabPanel h='100vh' key={index} p='0'>
+            <Flex px='2em' alignItems='center' gap='1.5em' h='5.25em' bg='#F7F7F7' borderLeft='1px solid #E8E8E8'>
+              {chat.presence.active ? (<Avatar src={chat.avatar} boxSize='3em'>
+                <AvatarBadge boxSize='1rem' bg='#3CD65E' border='1px solid #FAFAFA' />
+              </Avatar>) : (<Avatar src={chat.avatar} boxSize='3em' />)}
               <Flex direction='column' justifyContent='center' w='100%'>
-                <Text fontWeight='600' fontSize='lg'>{chat.name}</Text>
+                <Text fontWeight='600' fontSize='xl'>{chat.username}</Text>
                 {chat.presence.active ? (
                   <Text fontSize='sm' color='#545454'>Active now</Text>
                 ) : (
-                  <Text fontSize='sm' color='#545454'>Last seen {timeAgo(chat.messageHistory[0].timestamp * 1000)}</Text>
+                  <Text fontSize='sm' color='#545454'>Last seen {timeAgo(chat.presence.lastActive * 1000)}</Text>
                 )}
               </Flex>
             </Flex>
-            <Flex>
-              TODO: Chat Message Room
+            <Flex w='100%' h='calc(100vh - 11em)' direction='column' px='4.5em' py='3em' gap='1.75em' overflow='auto'>
+              {chat.messageHistory?.length ? chat.messageHistory.map((message, index) => {
+                return (
+                  <Flex key={index} w='100%' h='fit-content' gap='1.25em'>
+                    {profile.username === message.sender ? (<Avatar src={profile.avatar} />) :
+                      (<Avatar src={chat.avatar} />)}
+                    <Flex direction='column' gap='0.625em'>
+                      <Flex gap='0.625em' alignItems='baseline'>
+                        <Text fontSize='xl' fontWeight='600' color={profile.username === message.sender ? '#1D4044' : '#043968'}>{message.sender}</Text>
+                        <Text color='#545454' fontSize='sm'>{new Date(message.timestamp * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Text>
+                      </Flex>
+                      <Text fontSize='lg' w='fit-content' py='1.125em' px='1.75em' borderRadius='0px 1em 1em 1em' color='#FAFAFA' bg={profile.username === message.sender ? '#275D4D' : '#06447C'}>{message.content}</Text>
+                    </Flex>
+                  </Flex>
+                )
+              }) : (<Flex w='100%' h='100%' justifyContent='center' alignItems='center'>
+                <Text fontSize='4xl' color='#C7C7C7' userSelect='none'>Conversation is empty.</Text>
+              </Flex>)}
             </Flex>
-          </TabPanel>
+            <Flex px='4.5em' py='1em'>
+              <Input px='1.375em' variant='unstyled' bg='#FAFAFA' border='1px solid #545454' boxShadow='0.25em 0.25em 0.25em rgba(0, 0, 0, 0.1)' placeholder={`Message ${chat.username}`} w='100%' h='3.25em' />
+            </Flex>
+          </TabPanel>)
         })}
       </TabPanels>
     </Tabs>
-
   )
 }
 
 const Dashboard = () => {
   return (
     <Tabs isManual variant='unstyled' orientation='vertical' bg='#EDEDED'>
-      <TabList bg='#1D4044' w='4em' display='flex' alignItems='center' justifyContent='space-between' gap='0.5em' h='100dvh' px='0.5em' py='1.5em'>
+      <TabList bg='#1D4044' w='4em' display='flex' alignItems='center' justifyContent='space-between' gap='0.5em' h='100vh' px='0.5em' py='1.5em'>
         <Flex direction='column' gap='0.5em'>
           <Tab w='3em' h='3em' borderRadius='0.625em' _selected={{ bg: '#2D666C' }}><PersonIcon /></Tab>
           <Tab w='3em' h='3em' borderRadius='0.625em' _selected={{ bg: '#2D666C' }}><ChatIcon /></Tab>
@@ -150,7 +118,7 @@ const Dashboard = () => {
           <Profile profile={mockProfileData} />
         </TabPanel>
         <TabPanel p='0' h='100%' display='flex' flexDirection='column'>
-          <Chat chats={mockChatData} />
+          <Chat chats={mockChatData} profile={mockProfileData} />
         </TabPanel>
       </TabPanels>
     </Tabs >
